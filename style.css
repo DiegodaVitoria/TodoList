@@ -29,6 +29,10 @@ body{
  
 }
 
+.wrapper img{
+  width: 30%;
+}
+
 .wrapper .inputField{
  display: flex;
  height: 45px;
@@ -57,14 +61,28 @@ body{
  border-radius: 3px;
  margin-left: 5px;
  opacity: 0.6;
- pointer-events: none;
+
 }
 
 .inputField button.active{
  opacity: 1;
  pointer-events: auto;
 
+
 }
+
+.inputField button i{
+
+  pointer-events: none;transform:rotate(45deg);
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .inputField button.active i{
+
+  pointer-events: none;transform:rotate(180deg);
+  transition: all 0.3s ease-in-out;
+ 
+ }
 
 .wrapper .todoList{
  max-height: 250px ;
@@ -122,8 +140,13 @@ body{
 
 .footer button:hover{
  background: #e74c3c;
- 
+ content: "";
 
+}
+
+
+.pendingTasks{
+  margin-left: 11px;
 }
 
 
